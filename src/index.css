@@ -1,11 +1,9 @@
 body {
-  background-color: black;
+  background-color: #92AF6E;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  color: white;
 }
 h1 {
-  color: orange;
-  text-align: center;
+  color: white;
   font-size: 2rem;
-  margin-top: 2rem;
+  margin: 2rem;
 }
