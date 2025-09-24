@@ -1,34 +1,13 @@
 function HomePage() {
     return ( 
         <>
-        <h1>Recipefy🥧</h1>
-        <div className="search" style={{
-            display: 'flex', 
-            justifyContent: 'center', 
-            alignItems: 'center', 
-            gap: '10px',
-            marginTop: '20px'
-        }}>
-            <input type="search" placeholder="Chicken fry" required style={{
-                padding: '10px', 
-                borderRadius: '5px', 
-                border: '1px solid #ccc', 
-                width: '300px',
-                fontSize: '1em',
-                border: 'none',
-                outline: 'none', 
-                boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
-            }}/>
-            <button type="submit" style={{
-                padding: '10px 20px', 
-                borderRadius: '5px', 
-                border: 'none',
-                backgroundColor: '#92FF32', 
-                color: 'black', 
-                fontSize: '1em', 
-                cursor: 'pointer'
-            }}>SEARCH</button>
-        </div>
+        <div className="mx-auto my-11">
+            <h1 className="text-white text-6xl font-bold text-center">Healthy meals, zero fuss</h1>
+            <p className="text-white text-3xl font-bold my-9 text-center">Discover whole-food recipes that you can cook anytime <br /> no processed junk, no guesswork.</p>
+        </div>    
+            <div className="bg-white w-3/4 h-160 rounded-xl mx-auto overflow-hidden">
+                <img src="/src/assets/aakash-malik-kLVOlYLGBFE-unsplash.jpg" className="w-full h-full mx-auto object-cover" alt="Ingredients on the table" />
+            </div>
         </>
 
     );
