@@ -8,6 +8,9 @@ function HomePage() {
             <div className="bg-white w-3/4 h-160 rounded-xl mx-auto overflow-hidden">
                 <img src="/src/assets/aakash-malik-kLVOlYLGBFE-unsplash.jpg" className="w-full h-full mx-auto object-cover" alt="Ingredients on the table" />
             </div>
+            <div className="">
+                <h2>What you'll get</h2>
+            </div>
         </>
 
     );
