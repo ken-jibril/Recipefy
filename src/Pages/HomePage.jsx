@@ -55,10 +55,9 @@ function HomePage() {
                 </div>
             </div>
             <footer>
-                <p className="text-white font-bold text-center text-2xl gap-0.5 my-2 bg-black w-full py-2.5 relative left-0 my-0 bottom-0">&copy; Made with ❤ by @Recipes. 2025. All Rights Reserved</p>
+                <p className="text-white font-bold text-center text-2xl gap-0.5 bg-black w-full py-2.5 relative left-0 my-0 bottom-0">&copy; Made with ❤ by @Recipes. 2025. All Rights Reserved</p>
             </footer>
         </>
-
     );
 }
 
