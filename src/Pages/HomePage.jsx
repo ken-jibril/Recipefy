@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 function HomePage() {
     return ( 
         <>
@@ -6,7 +8,7 @@ function HomePage() {
                 <p className="text-white text-3xl font-bold my-9 text-center">Discover whole-food recipes that you can cook anytime <br /> no processed junk, no guesswork.</p>
             </div>    
             <div className="bg-white w-3/4 h-160 rounded-xl mx-auto overflow-hidden">
-                <img src="/src/assets/aakash-malik-kLVOlYLGBFE-unsplash.jpg" className="w-full h-full mx-auto object-cover" alt="Ingredients on the table" />
+                <img src="/src/assets/aakash-malik-kLVOlYLGBFE-unsplash.jpg" className="w-full h-full mx-auto object-cover" alt="Ingredients on the table loading-lazy" />
             </div>
                 <h2 className="text-white hover:text-shadow-xl text-center md:text-6xl my-25 sm:text-3xl">What you'll get</h2>
             <div className="flex justify-around my-15">
@@ -21,7 +23,7 @@ function HomePage() {
                 <p className="text-green-600 font-bold">All recipes are designed to make eating healthy, quick and easy to make.</p>
                </div>
                <div className="bg-white w-90 h-70 items-center flex flex-col px-3 py-4 rounded-3xl shadow-lg hover:shadow-2xl hover:scale-110 transition-transform duration-500 ease-in-out">
-                <img src="/search-engine_8163236.png" alt="Search icon" className="w-16 h-16"/>
+                <img src="/search-engine_8163236.png" alt="Search icon" className="w-16 h-16 "/>
                 <h3 className="text-green-800 text-2xl py-4 font-bold">Search in seconds</h3>
                 <p className="text-green-600 font-bold">Filter by name or ingredient and jump straight to the recipe you need.</p>
                </div>
@@ -34,17 +36,27 @@ function HomePage() {
                  <p className="text-green-700 font-bold leading-9 text-base px-1.5 py-1">We have hundreds of tasty recipes from quick snacks to full family dinners so you'll never run out of ideas. Whether you're a beginner or a seasoned cook, we've got step-by-step guides to help you turn simple ingredients into mouth-watering meals.</p>  
               </div> 
               <div className="flex w-[600px] h-[440px] rounded-xl overflow-hidden object-cover hover:shadow-2xl">
-                <img src="/jonathan-borba-15E3Hx-VabE-unsplash.jpg" alt="A cook cutting ingredients on a chopping board." className="w-full h-full rounded-2xl" />  
+                <img src="/jonathan-borba-15E3Hx-VabE-unsplash.jpg" alt="A cook cutting ingredients on a chopping board." className="w-full h-full rounded-2xl loading-lazy" />  
               </div>   
             </div>  
             <div className="flex justify-center items-center my-50">
                 <div className="relative w-3/4 h-[40rem]">
-                    <img src="/sun-koh-6yy5bZNOsec-unsplash.jpg" alt="Cutlery image" className="w-full h-full rounded-3xl object-cover" />
+                    <img src="/sun-koh-6yy5bZNOsec-unsplash.jpg" alt="Cutlery image" className="w-full h-full rounded-3xl object-cover opacity-60 loading-lazy" />
+
+                    {/* overlay should be INSIDE relative container */}
+                    <div className="absolute inset-0 flex items-center justify-center flex-col">
+                        <h2 className="text-white text-4xl font-bold bg-black/80 px-6 py-3 rounded-lg">
+                            Ready to cook smarter?
+                        </h2>
+                        <p className="text-white text-lg bg-black/75 py-4 px-2 my-8 font-bold rounded-lg ">Hit the button, pick a recipe, and get dinner on the table-fast.</p>
+
+                        <Link to="/recipes" className="text-white text-4xl font-bold bg-green-500 rounded-lg max-w-fit px-2 py-1">Recipes</Link>
+                    </div>
                 </div>
-                <div className="absolute inset-0 flex items-center justify-center">
-                    <h2 className="text-white text-4xl font-bold bg-black/50 px-6 py-3 rounded-lg">Ready to cook smarter?</h2>
-                </div>
-            </div>  
+            </div>
+            <footer>
+                <p className="text-white font-bold text-center text-2xl gap-0.5 my-2 bg-black w-full py-2.5 relative left-0 my-0 bottom-0">&copy; Made with ❤ by @Recipes. 2025. All Rights Reserved</p>
+            </footer>
         </>
 
     );
