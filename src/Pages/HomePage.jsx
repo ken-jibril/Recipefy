@@ -8,7 +8,7 @@ function HomePage() {
                 <p className="text-white text-3xl font-bold my-9 text-center">Discover whole-food recipes that you can cook anytime <br /> no processed junk, no guesswork.</p>
             </div>    
             <div className="bg-white w-3/4 h-160 rounded-xl mx-auto overflow-hidden">
-                <img src="/src/assets/aakash-malik-kLVOlYLGBFE-unsplash.jpg" className="w-full h-full mx-auto object-cover" alt="Ingredients on the table loading-lazy" />
+                <img src="/src/assets/aakash-malik-kLVOlYLGBFE-unsplash.jpg" className="w-full h-full mx-auto object-cover loading-lazy" alt="Ingredients on the table loading-lazy" />
             </div>
                 <h2 className="text-white hover:text-shadow-xl text-center md:text-6xl my-25 sm:text-3xl">What you'll get</h2>
             <div className="flex justify-around my-15">
@@ -50,12 +50,12 @@ function HomePage() {
                         </h2>
                         <p className="text-white text-lg bg-black/75 py-4 px-2 my-8 font-bold rounded-lg ">Hit the button, pick a recipe, and get dinner on the table-fast.</p>
 
-                        <Link to="/recipes" className="text-white text-4xl font-bold bg-green-500 rounded-lg max-w-fit px-2 py-1">Recipes</Link>
+                        <Link to="/recipes" className="text-white text-4xl font-bold bg-black rounded-lg max-w-fit px-2 py-1">Recipes</Link>
                     </div>
                 </div>
             </div>
             <footer>
-                <p className="text-white font-bold text-center text-2xl gap-0.5 bg-black w-full py-2.5 relative left-0 my-0 bottom-0">&copy; Made with ❤ by @Recipes. 2025. All Rights Reserved</p>
+                <small><p className="text-gray-500 font-bold text-center text-xl gap-0.5 bg-black w-full py-2.5 relative left-0 my-0 bottom-0">&copy; Made with ❤ 2025. All Rights Reserved</p></small>
             </footer>
         </>
     );
