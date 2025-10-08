@@ -1,12 +1,21 @@
-import { useState, useEffect } from "react";
+import { useQuery } from "@tanstack/react-query";
 
 
 function RecipePage() {
 
-    const [recipes, setRecipes] = useState([]);
-    const [loading, setLoading] = useState("");
-    const [error, setError] = useState("");
+    let API_URL = 'https://www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata';
 
+    const [data, isLoading, isError, Error] = useQuery({
+        queryKey: ['recipes'],
+        queryFn: async () => {
+            const res = await fetch();
+            return res.json();
+        },
+    });
+
+    if (isLoading) {
+        return <p className="bg-white text-gray-700 ">Loading...</p>
+    }
 
     return ( 
         <>
