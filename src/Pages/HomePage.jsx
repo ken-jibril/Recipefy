@@ -11,7 +11,7 @@ function HomePage() {
                 <img src="/src/assets/aakash-malik-kLVOlYLGBFE-unsplash.jpg" className="w-full h-full mx-auto object-cover loading-lazy" alt="Ingredients on the table loading-lazy" />
             </div>
                 <h2 className="text-white hover:text-shadow-xl text-center md:text-6xl my-25 sm:text-3xl">What you'll get</h2>
-            <div className="flex justify-around my-15">
+            <div className="flex justify-center gap-20 my-15">
                <div className="bg-white w-90 h-70 items-center flex flex-col px-3 py-4 rounded-3xl shadow-lg hover:shadow-2xl hover:scale-110 transition-transform duration-500 ease-in-out">
                 <img src="/05dbafde-b769-43ad-909e-a3ab5f6dd7ea.jpg" alt="food icon" className="w-20 h-20 py-1"/>
                 <h3 className="text-green-800 text-2xl py-4 font-bold">Whole-food recipes</h3>
