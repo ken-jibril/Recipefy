@@ -54,9 +54,7 @@ function HomePage() {
                     </div>
                 </div>
             </div>
-            {/* <footer>
-                <small><p className="text-gray-500 font-bold text-center text-xl gap-0.5 bg-black w-full py-2.5 relative left-0 my-0 bottom-0">&copy; Made with ❤ 2025. All Rights Reserved</p></small>
-            </footer> */}
+            
         </>
     );
 }
