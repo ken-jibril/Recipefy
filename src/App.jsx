@@ -9,8 +9,10 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
+    <div className='flex flex-col min-h-screen'>
     <Navbar />
+
+    <main className="flex-grow">
       <Routes>
         <Route 
             path="/" 
@@ -21,8 +23,10 @@ function App() {
             element={<RecipePage/>} 
         />
       </Routes>
+    </main>
+
     <Footer />
-    </>
+    </div>
   )
 }
 
