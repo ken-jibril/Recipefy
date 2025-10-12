@@ -9,14 +9,14 @@ function Navbar() {
   ];
 
   return (
-    <nav className="relative flex gap-10 my-4 py-2 px-4 text-xl bg-black shadow-xl items-center justify-between rounded-full max-w-fit mx-auto">
+    <nav className="relative flex gap-10 my-4 py-3 px-4 text-xl bg-black shadow-xl items-center justify-between rounded-full max-w-fit mx-auto">
       {links.map((link) => {
         const isActive = location.pathname === link.path;
         return (
           <div key={link.path} className="relative">
             <Link
               to={link.path}
-              className={`relative z-10 px-5 py-2 rounded-full font-semibold transition-all duration-300 ${
+              className={`relative z-10 px-5 py-3 rounded-full font-semibold transition-all duration-300 ${
                 isActive ? "text-black" : "text-white"
               }`}
             >
