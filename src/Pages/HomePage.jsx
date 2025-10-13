@@ -50,7 +50,7 @@ function HomePage() {
                         </h2>
                         <p className="text-white text-lg bg-black/75 py-4 px-2 my-8 font-bold rounded-lg ">Hit the button, pick a recipe, and get dinner on the table-fast.</p>
 
-                        <Link to="/recipes" className="text-white text-4xl font-bold bg-black rounded-lg max-w-fit px-2 py-1">Recipes</Link>
+                        <Link to="/recipes" className="text-white text-4xl font-bold bg-black rounded-lg max-w-fit px-2 py-1 hover:bg-gray-400 hover:text-black">Recipes</Link>
                     </div>
                 </div>
             </div>
