@@ -4,6 +4,7 @@ import Navbar from './components/Navbar.jsx'
 import HomePage from './Pages/HomePage.jsx'
 import RecipePage from './Pages/RecipePage.jsx'
 import Footer from './components/Footer.jsx'
+import RecipeDetails from './Pages/RecipeDetails.jsx'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -21,6 +22,10 @@ function App() {
         <Route 
             path="/recipes" 
             element={<RecipePage/>} 
+        />
+        <Route
+               path="/recipe/:id"
+               element={<RecipeDetails />}
         />
       </Routes>
     </main>
