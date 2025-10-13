@@ -1,9 +1,10 @@
 import { useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
-
+import { useNavigate } from "react-router-dom";
 
 function RecipeDetails() {
   const { id } = useParams();
+  const navigate = useNavigate();
   
 
   const { data, isLoading, isError, error } = useQuery({
@@ -34,7 +35,14 @@ function RecipeDetails() {
 
   return (
     <div className="text-white px-6 py-10">
-
+      <div className="flex justify-start mb-6">
+            <button
+                onClick={() => navigate("/recipes")}
+                className="bg-[#92FF32] text-black text-lg font-bold px-4 py-2 rounded-lg shadow-md hover:bg-[#a8ff57] transition-all duration-300"
+                >
+                <span className="font-extrabold text-2xl">←</span> Back to Recipes
+            </button>
+        </div>
       <h1 className="text-4xl font-bold text-center mb-6">{meal.strMeal}</h1>
       <img
         src={meal.strMealThumb}
@@ -60,9 +68,9 @@ function RecipeDetails() {
             <h2 className="text-3xl font-semibold mt-8 mb-4 text-center underline underline-offset-8">👨‍🍳 Instructions</h2>
             <ul className="list-decimal pl-6 space-y-2 text-lg leading-relaxed">
                 {meal.strInstructions
-                ?.split(/\r?\n|\r/) // split only on actual new lines
-                .map((step) => step.replace(/^\d+\.\s*/, "")) // remove any "1." or "2." at the start
-                .filter((step) => step.trim().length > 0) // clean up empty lines
+                ?.split(/\r?\n|\r/) 
+                .map((step) => step.replace(/^\d+\.\s*/, "")) 
+                .filter((step) => step.trim().length > 0) 
                 .map((step, index) => (
                 <li key={index}>{step.trim()}</li>
                 ))}
