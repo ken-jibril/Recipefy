@@ -1,5 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function RecipePage() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -102,6 +103,7 @@ function RecipePage() {
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 px-3 py-12">
           {data?.meals?.map((meal) => (
+            <Link to={`/recipe/${meal.idMeal}`} key={meal.idMeal} className="flex flex-col justify-between max-w-full mx-auto bg-white rounded-xl shadow-lg overflow-hidden mb-8 transition-all duration-300 hover:scale-[1.02]">
             <div
               key={meal.idMeal}
               className="flex flex-col justify-between max-w-full mx-auto bg-white rounded-xl shadow-lg overflow-hidden mb-8 transition-all duration-300 hover:scale-[1.02]"
@@ -118,6 +120,7 @@ function RecipePage() {
                 </h2>
               </div>
             </div>
+          </Link>
           ))}
         </div>
       )}
